@@ -15,7 +15,6 @@
 		0848D1A92BD9D4B9005EFC43 /* le_arquivo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0848D1A72BD9D4B9005EFC43 /* le_arquivo.cpp */; };
 		0848D1AC2BD9D521005EFC43 /* letra_existe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0848D1AA2BD9D521005EFC43 /* letra_existe.cpp */; };
 		0848D1AF2BD9D552005EFC43 /* nao_acertou.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0848D1AD2BD9D552005EFC43 /* nao_acertou.cpp */; };
-		0848D1B22BD9D580005EFC43 /* nao_enforcou.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0848D1B02BD9D580005EFC43 /* nao_enforcou.cpp */; };
 		0848D1B52BD9D5AB005EFC43 /* salva_arquivo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0848D1B32BD9D5AB005EFC43 /* salva_arquivo.cpp */; };
 		0848D1B82BD9D5D1005EFC43 /* sorteia_palavra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0848D1B62BD9D5D1005EFC43 /* sorteia_palavra.cpp */; };
 		0848D1BE2BD9D622005EFC43 /* imprime_footer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0848D1BC2BD9D622005EFC43 /* imprime_footer.cpp */; };
@@ -52,8 +51,6 @@
 		0848D1AB2BD9D521005EFC43 /* letra_existe.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = letra_existe.hpp; sourceTree = "<group>"; };
 		0848D1AD2BD9D552005EFC43 /* nao_acertou.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nao_acertou.cpp; sourceTree = "<group>"; };
 		0848D1AE2BD9D552005EFC43 /* nao_acertou.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = nao_acertou.hpp; sourceTree = "<group>"; };
-		0848D1B02BD9D580005EFC43 /* nao_enforcou.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nao_enforcou.cpp; sourceTree = "<group>"; };
-		0848D1B12BD9D580005EFC43 /* nao_enforcou.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = nao_enforcou.hpp; sourceTree = "<group>"; };
 		0848D1B32BD9D5AB005EFC43 /* salva_arquivo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = salva_arquivo.cpp; sourceTree = "<group>"; };
 		0848D1B42BD9D5AB005EFC43 /* salva_arquivo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = salva_arquivo.hpp; sourceTree = "<group>"; };
 		0848D1B62BD9D5D1005EFC43 /* sorteia_palavra.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sorteia_palavra.cpp; sourceTree = "<group>"; };
@@ -112,8 +109,6 @@
 				0848D1AB2BD9D521005EFC43 /* letra_existe.hpp */,
 				0848D1AD2BD9D552005EFC43 /* nao_acertou.cpp */,
 				0848D1AE2BD9D552005EFC43 /* nao_acertou.hpp */,
-				0848D1B02BD9D580005EFC43 /* nao_enforcou.cpp */,
-				0848D1B12BD9D580005EFC43 /* nao_enforcou.hpp */,
 				0848D1B32BD9D5AB005EFC43 /* salva_arquivo.cpp */,
 				0848D1B42BD9D5AB005EFC43 /* salva_arquivo.hpp */,
 				0848D1B62BD9D5D1005EFC43 /* sorteia_palavra.cpp */,
@@ -189,7 +184,6 @@
 				0848D1A92BD9D4B9005EFC43 /* le_arquivo.cpp in Sources */,
 				0848D19D2BD9D3CC005EFC43 /* chuta.cpp in Sources */,
 				0848D19A2BD9D347005EFC43 /* adiciona_palavra.cpp in Sources */,
-				0848D1B22BD9D580005EFC43 /* nao_enforcou.cpp in Sources */,
 				0848D1AF2BD9D552005EFC43 /* nao_acertou.cpp in Sources */,
 				0848D1A62BD9D44E005EFC43 /* imprime_palavra.cpp in Sources */,
 				0848D1A32BD9D422005EFC43 /* imprime_erros.cpp in Sources */,

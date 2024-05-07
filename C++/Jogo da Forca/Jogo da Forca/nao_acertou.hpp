@@ -10,7 +10,9 @@
 #define nao_acertou_hpp
 
 #include <stdio.h>
+#include <string>
+#include <map>
 
-bool nao_acertou();
+bool nao_acertou(std::string, std::map<char, bool>);
 
 #endif /* nao_acertou_hpp */

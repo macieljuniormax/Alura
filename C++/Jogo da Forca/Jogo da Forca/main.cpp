@@ -21,7 +21,6 @@
 #include "le_arquivo.hpp"
 #include "letra_existe.hpp"
 #include "nao_acertou.hpp"
-#include "nao_enforcou.hpp"
 #include "salva_arquivo.hpp"
 #include "sorteia_palavra.hpp"
 
@@ -34,13 +33,13 @@ int main(int argc, const char * argv[]) {
     
     palavra_secreta = sorteia_palavra();
     
-    while (nao_acertou () && nao_enforcou ()) {
-        imprime_erros ();
-        imprime_palavra ();
-        chuta ();
+    while (nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
+        imprime_erros(chutes_errados);
+        imprime_palavra(palavra_secreta, chutou);
+        chuta(&chutou, &chutes_errados);
     }
     
-    if (nao_acertou()) {
+    if (nao_acertou(palavra_secreta, chutou)) {
         std::cout << "Você Perdeu ☹️" << std::endl;
         std::cout << "A palavra secreta era: " << palavra_secreta << std::endl;
     } else {

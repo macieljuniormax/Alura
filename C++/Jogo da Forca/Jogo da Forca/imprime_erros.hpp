@@ -10,7 +10,8 @@
 #define imprime_erros_hpp
 
 #include <stdio.h>
+#include <vector>
 
-void imprime_erros ();
+void imprime_erros(std::vector<char>);
 
 #endif /* imprime_erros_hpp */

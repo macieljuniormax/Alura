@@ -10,7 +10,9 @@
 #define chuta_hpp
 
 #include <stdio.h>
+#include <map>
+#include <vector>
 
-void chuta ();
+void chuta(std::map<char, bool>*, std::vector<char>*);
 
 #endif /* chuta_hpp */
