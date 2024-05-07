@@ -10,7 +10,9 @@
 #define letra_existe_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <string>
 
-bool letraExiste (char);
+bool letraExiste(char&, std::string&);
 
 #endif /* letra_existe_hpp */

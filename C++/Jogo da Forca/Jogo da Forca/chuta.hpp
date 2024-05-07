@@ -13,6 +13,6 @@
 #include <map>
 #include <vector>
 
-void chuta(std::map<char, bool>*, std::vector<char>*);
+void chuta(std::map<char, bool>&, std::vector<char>&, std::string&);
 
 #endif /* chuta_hpp */

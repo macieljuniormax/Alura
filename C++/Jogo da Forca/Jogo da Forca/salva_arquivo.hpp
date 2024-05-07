@@ -13,6 +13,6 @@
 #include <vector>
 #include <string>
 
-void salva_arquivo (std::vector<std::string>);
+void salva_arquivo (std::vector<std::string>&);
 
 #endif /* salva_arquivo_hpp */

@@ -30,13 +30,12 @@ std::vector<char> chutes_errados;
 
 int main(int argc, const char * argv[]) {
     imprime_cabecalho();
-    
     palavra_secreta = sorteia_palavra();
     
     while (nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
         imprime_erros(chutes_errados);
         imprime_palavra(palavra_secreta, chutou);
-        chuta(&chutou, &chutes_errados);
+        chuta(chutou, chutes_errados, palavra_secreta);
     }
     
     if (nao_acertou(palavra_secreta, chutou)) {

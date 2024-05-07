@@ -8,9 +8,7 @@
 #include "letra_existe.hpp"
 #include <string>
 
-extern std::string palavra_secreta;
-
-bool letraExiste (char chute) {
+bool letraExiste(char& chute, std::string& palavra_secreta) {
     for (char letra : palavra_secreta) {
         if (chute == letra) {
             return true;

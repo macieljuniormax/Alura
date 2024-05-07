@@ -9,7 +9,7 @@
 #include <iostream>
 #include <fstream>
 
-void salva_arquivo (std::vector<std::string> nova_lista) {
+void salva_arquivo (std::vector<std::string>& nova_lista) {
     std::ofstream arquivo;
     arquivo.open("/Users/macieljunior/Library/Mobile Documents/com~apple~CloudDocs/Academy/Alura/C++/Jogo da Forca/Jogo da Forca/palavras.txt");
     
