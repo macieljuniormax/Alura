@@ -13,6 +13,6 @@
 #include <string>
 #include <map>
 
-bool nao_acertou(std::string&, std::map<char, bool>&);
+bool nao_acertou(std::string&, const std::map<char, bool>&);
 
 #endif /* nao_acertou_hpp */

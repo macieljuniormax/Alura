@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include <vector>
 
-void imprime_erros(std::vector<char>&);
+void imprime_erros(const std::vector<char>&);
 
 #endif /* imprime_erros_hpp */
