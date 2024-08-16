@@ -1,0 +1,45 @@
+<app-card variant="secondary">
+  <form class="form-busca">
+    <h2>Passagens</h2>
+    <div class="flex-container">
+      <mat-button-toggle-group aria-label="Tipo de Passagem">
+        <mat-button-toggle>IDA E VOLTA</mat-button-toggle>
+        <mat-button-toggle>SOMENTE IDA</mat-button-toggle>
+      </mat-button-toggle-group>
+      <mat-chip-listbox (click)="openDialog()" aria-label=" Seleção de Passagens" [multiple]="true">
+        <mat-chip-option selected> 1 adulto </mat-chip-option>
+        <mat-chip-option> Econômica </mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+    <div class="flex-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Origem</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput placeholder="Origem">
+        <mat-icon matSuffix>flight_takeoff</mat-icon>
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon>sync_alt</mat-icon>
+      </button>
+      <mat-form-field appearance="outline">
+        <mat-label>Origem</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput placeholder="Origem">
+        <mat-icon matSuffix>flight_land</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Data da Ida</mat-label>
+        <input matInput [matDatepicker]="ida">
+        <mat-datepicker-toggle matIconSuffix [for]="ida"></mat-datepicker-toggle>
+        <mat-datepicker #ida></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Data da Volta</mat-label>
+        <input matInput [matDatepicker]="volta">
+        <mat-datepicker-toggle matIconSuffix [for]="volta"></mat-datepicker-toggle>
+        <mat-datepicker #volta></mat-datepicker>
+      </mat-form-field>
+      <button mat-flat-button color="primary">BUSCAR</button>
+    </div>
+  </form>
+</app-card>
