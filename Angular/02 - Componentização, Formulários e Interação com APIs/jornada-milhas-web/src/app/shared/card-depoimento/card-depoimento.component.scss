@@ -1,0 +1,23 @@
+.card-depoimento {
+  max-width: 320px;
+  height: 100%;
+  margin-bottom: 8px;
+  padding: 0.75rem;
+  background-color: #FEF7FF;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
+
+  .card-depoimento__image {
+    width: 52px;
+    height: 52px;
+    border-radius: 0px;
+  }
+
+  .card_depoimento__content {
+    .card_depoimento__content__name {
+      font-weight: 500;
+    }
+  }
+}

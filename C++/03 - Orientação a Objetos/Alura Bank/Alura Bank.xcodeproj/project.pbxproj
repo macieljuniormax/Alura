@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		080337732BFA8DB100774145 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 080337722BFA8DB100774145 /* main.cpp */; };
+		0897CD522BFA9A7D0017FE0F /* Conta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0897CD502BFA9A7D0017FE0F /* Conta.cpp */; };
+		0897CD552BFAB8F70017FE0F /* Titular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0897CD532BFAB8F70017FE0F /* Titular.cpp */; };
+		0897CD582BFABE9B0017FE0F /* Cpf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0897CD562BFABE9B0017FE0F /* Cpf.cpp */; };
+		0897CD5B2BFD0B770017FE0F /* Funcionario.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0897CD592BFD0B770017FE0F /* Funcionario.cpp */; };
+		0897CD5E2BFD190C0017FE0F /* Pessoa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0897CD5C2BFD190C0017FE0F /* Pessoa.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0803376D2BFA8DB100774145 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0803376F2BFA8DB100774145 /* Alura Bank */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Alura Bank"; sourceTree = BUILT_PRODUCTS_DIR; };
+		080337722BFA8DB100774145 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0897CD502BFA9A7D0017FE0F /* Conta.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Conta.cpp; sourceTree = "<group>"; };
+		0897CD512BFA9A7D0017FE0F /* Conta.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Conta.hpp; sourceTree = "<group>"; };
+		0897CD532BFAB8F70017FE0F /* Titular.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Titular.cpp; sourceTree = "<group>"; };
+		0897CD542BFAB8F70017FE0F /* Titular.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Titular.hpp; sourceTree = "<group>"; };
+		0897CD562BFABE9B0017FE0F /* Cpf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cpf.cpp; sourceTree = "<group>"; };
+		0897CD572BFABE9B0017FE0F /* Cpf.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Cpf.hpp; sourceTree = "<group>"; };
+		0897CD592BFD0B770017FE0F /* Funcionario.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Funcionario.cpp; sourceTree = "<group>"; };
+		0897CD5A2BFD0B770017FE0F /* Funcionario.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Funcionario.hpp; sourceTree = "<group>"; };
+		0897CD5C2BFD190C0017FE0F /* Pessoa.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pessoa.cpp; sourceTree = "<group>"; };
+		0897CD5D2BFD190C0017FE0F /* Pessoa.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pessoa.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0803376C2BFA8DB100774145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080337662BFA8DB100774145 = {
+			isa = PBXGroup;
+			children = (
+				080337712BFA8DB100774145 /* Alura Bank */,
+				080337702BFA8DB100774145 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		080337702BFA8DB100774145 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0803376F2BFA8DB100774145 /* Alura Bank */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		080337712BFA8DB100774145 /* Alura Bank */ = {
+			isa = PBXGroup;
+			children = (
+				0897CD4F2BFA9A4D0017FE0F /* src */,
+			);
+			path = "Alura Bank";
+			sourceTree = "<group>";
+		};
+		0897CD4F2BFA9A4D0017FE0F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				080337722BFA8DB100774145 /* main.cpp */,
+				0897CD502BFA9A7D0017FE0F /* Conta.cpp */,
+				0897CD512BFA9A7D0017FE0F /* Conta.hpp */,
+				0897CD532BFAB8F70017FE0F /* Titular.cpp */,
+				0897CD542BFAB8F70017FE0F /* Titular.hpp */,
+				0897CD562BFABE9B0017FE0F /* Cpf.cpp */,
+				0897CD572BFABE9B0017FE0F /* Cpf.hpp */,
+				0897CD592BFD0B770017FE0F /* Funcionario.cpp */,
+				0897CD5A2BFD0B770017FE0F /* Funcionario.hpp */,
+				0897CD5C2BFD190C0017FE0F /* Pessoa.cpp */,
+				0897CD5D2BFD190C0017FE0F /* Pessoa.hpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0803376E2BFA8DB100774145 /* Alura Bank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 080337762BFA8DB100774145 /* Build configuration list for PBXNativeTarget "Alura Bank" */;
+			buildPhases = (
+				0803376B2BFA8DB100774145 /* Sources */,
+				0803376C2BFA8DB100774145 /* Frameworks */,
+				0803376D2BFA8DB100774145 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alura Bank";
+			productName = "Alura Bank";
+			productReference = 0803376F2BFA8DB100774145 /* Alura Bank */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		080337672BFA8DB100774145 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					0803376E2BFA8DB100774145 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 0803376A2BFA8DB100774145 /* Build configuration list for PBXProject "Alura Bank" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 080337662BFA8DB100774145;
+			productRefGroup = 080337702BFA8DB100774145 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0803376E2BFA8DB100774145 /* Alura Bank */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0803376B2BFA8DB100774145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0897CD5B2BFD0B770017FE0F /* Funcionario.cpp in Sources */,
+				0897CD552BFAB8F70017FE0F /* Titular.cpp in Sources */,
+				0897CD5E2BFD190C0017FE0F /* Pessoa.cpp in Sources */,
+				0897CD582BFABE9B0017FE0F /* Cpf.cpp in Sources */,
+				080337732BFA8DB100774145 /* main.cpp in Sources */,
+				0897CD522BFA9A7D0017FE0F /* Conta.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		080337742BFA8DB100774145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		080337752BFA8DB100774145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		080337772BFA8DB100774145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		080337782BFA8DB100774145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0803376A2BFA8DB100774145 /* Build configuration list for PBXProject "Alura Bank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080337742BFA8DB100774145 /* Debug */,
+				080337752BFA8DB100774145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		080337762BFA8DB100774145 /* Build configuration list for PBXNativeTarget "Alura Bank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080337772BFA8DB100774145 /* Debug */,
+				080337782BFA8DB100774145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 080337672BFA8DB100774145 /* Project object */;
+}
