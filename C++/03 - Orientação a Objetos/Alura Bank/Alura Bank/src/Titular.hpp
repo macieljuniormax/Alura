@@ -11,17 +11,17 @@
 #include "Cpf.hpp"
 #include <string>
 
-class Titular {
+class Titular
+{
 private:
-    Cpf cpf;
-    std::string nome;
-    void verificaTamanhoDoNome();
-    
-public:
-    Titular(Cpf cpf, std::string nome);
-    Cpf getCpf();
-    std::string getNome();
-};
+  Cpf cpf;
+  std::string nome;
+  void verificaTamanhoDoNome();
 
+public:
+  Titular(Cpf cpf, std::string nome);
+  Cpf getCpf();
+  std::string getNome();
+};
 
 #endif /* Titular_hpp */
