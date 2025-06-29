@@ -52,9 +52,10 @@ node_modules/
 # Build e cache
 build/
 DerivedData/
-*.xcworkspace/xcuserdata/
+*.project.xcworkspace/xcuserdata/
 *.xcuserdatad/
 *.xcuserstate
+*.project.pbxproj
 
 # IDEs
 .idea/
