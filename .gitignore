@@ -44,3 +44,72 @@ node_modules/
 
 # Arquivos Angular
 .angular/
+
+# =====================================
+# Xcode & iOS Projects - Git Ignore
+# =====================================
+
+# Build e cache
+build/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcuserdatad/
+*.xcuserstate
+
+# IDEs
+.idea/
+.vscode/
+
+# SwiftPM
+.swiftpm/
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/
+Carthage.build/
+
+# Xcode Automatically Generated
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+
+# Interface do usuário e estado pessoal
+project.xcworkspace/
+xcuserdata/
+*.xcuserstate
+
+# Arquivos temporários do macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Arquivos de ícones e preview
+Icon?
+._*
+
+# Arquivos de backup e swap
+*.swp
+*.tmp
+*.bak
+*.orig
+
+# Arquivos de log e dump
+*.log
+*.crash
+
+# Arquivos ocultos do sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Arquivos de ambiente
+.env
+.env.local
