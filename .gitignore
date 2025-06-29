@@ -55,7 +55,7 @@ DerivedData/
 *.project.xcworkspace/xcuserdata/
 *.xcuserdatad/
 *.xcuserstate
-*.project.pbxproj
+*.pbxproj
 
 # IDEs
 .idea/
