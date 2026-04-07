@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryView: View {
-    let category: Category
+    let category: CategoryType
     
     var body: some View {
         VStack (spacing: 5) {
@@ -33,7 +33,7 @@ struct CategoryView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    CategoryView(category: Category(
+    CategoryView(category: CategoryType(
         id: 1,
         name: "Restaurantes",
         image: "restaurantes",

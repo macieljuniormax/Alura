@@ -11,20 +11,22 @@ import SwiftData
 struct ContentView: View {
     
     var body: some View {
-        VStack {
-            NavigationBar()
-                .padding(Edge.Set.horizontal, 16)
-            
-            ScrollView(Axis.Set.vertical, showsIndicators: true) {
-                VStack(spacing: 32) {
-                    CategoryGridView()
-                        .padding(Edge.Set.horizontal, 16)
-                    
-                    CarouselTabView()
-                        .padding(Edge.Set.horizontal, 16)
-                    
-                    StoresContainerView()
-                        .padding(Edge.Set.horizontal, 16)
+        NavigationView {
+            VStack {
+                NavigationBar()
+                    .padding(Edge.Set.horizontal, 16)
+                
+                ScrollView(Axis.Set.vertical, showsIndicators: true) {
+                    VStack(spacing: 32) {
+                        CategoryGridView()
+                            .padding(Edge.Set.horizontal, 16)
+                        
+                        CarouselTabView()
+                            .padding(Edge.Set.horizontal, 16)
+                        
+                        StoresContainerView()
+                            .padding(Edge.Set.horizontal, 16)
+                    }
                 }
             }
         }

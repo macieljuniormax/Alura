@@ -5,7 +5,7 @@
 //  Created by Maciel Ferreira Custódio Júnior on 04/04/26.
 //
 
-struct Banner: Identifiable {
+struct BannerType: Identifiable {
     let id: Int
     let image: String
 }

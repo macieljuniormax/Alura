@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category: Identifiable {
+struct CategoryType: Identifiable {
     let id: Int
     let name: String
     let image: String

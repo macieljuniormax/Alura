@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CarouselItemView: View {
-    let banner: Banner
+    let banner: BannerType
     
     var body: some View {
         Image(banner.image)
@@ -20,6 +20,6 @@ struct CarouselItemView: View {
 
 #Preview(traits: .sizeThatFitsLayout) {
     CarouselItemView(
-        banner: Banner(id: 1, image: "barbecue")
+        banner: BannerType(id: 1, image: "barbecue")
     )
 }
