@@ -21,6 +21,8 @@ struct StoreItemView: View {
             
             Text(store.name)
                 .font(Font.subheadline)
+            
+            Spacer()
         }
     }
 }

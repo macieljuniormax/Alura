@@ -16,11 +16,14 @@ struct ContentView: View {
                 .padding(Edge.Set.horizontal, 16)
             
             ScrollView(Axis.Set.vertical, showsIndicators: true) {
-                VStack(spacing: 16) {
+                VStack(spacing: 32) {
                     CategoryGridView()
                         .padding(Edge.Set.horizontal, 16)
                     
                     CarouselTabView()
+                        .padding(Edge.Set.horizontal, 16)
+                    
+                    StoresContainerView()
                         .padding(Edge.Set.horizontal, 16)
                 }
             }
