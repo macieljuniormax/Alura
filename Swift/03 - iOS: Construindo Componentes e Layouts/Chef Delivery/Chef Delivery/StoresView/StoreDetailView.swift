@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct StoreDetailView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @State var isFavorite = false
+    
     let store: StoreType
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: HorizontalAlignment.leading, spacing: 16) {
-//                Image(store.headerImage)
-//                    .resizable()
-//                    .scaledToFill()
-//                    .frame(maxWidth: CGFloat.infinity)
-//                    .frame(height: 200)
-//                    .clipped()
-                
                 GeometryReader { geo in
                     let offset = geo.frame(in: .global).minY
                     
@@ -91,12 +87,30 @@ struct StoreDetailView: View {
                 .padding(Edge.Set.horizontal, 16)
              }
             .navigationTitle(store.name)
+            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
         }
         .ignoresSafeArea(edges: Edge.Set.top)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "chevron.left")
+                }
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    isFavorite.toggle()
+                } label: {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                }
+            }
+        }
     }
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
     StoreDetailView(store: storesMock[0])
 }
-
