@@ -28,6 +28,7 @@ struct StoreDetailView: View {
                         )
                         .clipped()
                         .offset(y: offset > 0 ? -offset : 0)
+                        .ignoresSafeArea(edges: Edge.Set.top)
                 }
                 .frame(height: 250)
                 
@@ -60,28 +61,35 @@ struct StoreDetailView: View {
                     .padding(Edge.Set.horizontal, 16)
                 
                 ForEach(store.products) { product in
-                    HStack(alignment: VerticalAlignment.top, spacing: 8) {
-                        VStack(alignment: HorizontalAlignment.leading) {
-                            Text(product.name)
-                                .fontWeight(Font.Weight.bold)
-                            
-                            Text(product.description)
-                                .foregroundColor(Color.black.opacity(0.7))
+                    NavigationLink {
+                        ProductDetailView(product: product)
+                    } label: {
+                        HStack(alignment: VerticalAlignment.top, spacing: 8) {
+                            VStack(alignment: HorizontalAlignment.leading) {
+                                Text(product.name)
+                                    .fontWeight(Font.Weight.bold)
+                                    .foregroundColor(Color.black)
+                                
+                                Text(product.description)
+                                    .foregroundColor(Color.black.opacity(0.7))
+                                    .multilineTextAlignment(TextAlignment.leading)
+                                
+                                Spacer()
+                                
+                                Text(product.formattedPrice)
+                                    .foregroundStyle(Color.black)
+                            }
                             
                             Spacer()
                             
-                            Text(product.formattedPrice)
+                            Image(product.image)
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(15)
+                                .frame(height: 100)
+                                .shadow(color: Color.black.opacity(0.3),
+                                        radius: 20, x: 6, y: 8)
                         }
-                        
-                        Spacer()
-                        
-                        Image(product.image)
-                            .resizable()
-                            .scaledToFit()
-                            .cornerRadius(15)
-                            .frame(height: 100)
-                            .shadow(color: Color.black.opacity(0.3),
-                                    radius: 20, x: 6, y: 8)
                     }
                 }
                 .padding(Edge.Set.horizontal, 16)
@@ -89,7 +97,6 @@ struct StoreDetailView: View {
             .navigationTitle(store.name)
             .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
         }
-        .ignoresSafeArea(edges: Edge.Set.top)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -97,6 +104,7 @@ struct StoreDetailView: View {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     Image(systemName: "chevron.left")
+                        .foregroundColor(Color.red500)
                 }
             }
             
@@ -105,6 +113,7 @@ struct StoreDetailView: View {
                     isFavorite.toggle()
                 } label: {
                     Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .foregroundColor(Color.red500)
                 }
             }
         }
