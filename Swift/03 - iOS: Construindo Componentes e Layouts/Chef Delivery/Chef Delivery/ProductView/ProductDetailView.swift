@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductDetailView: View {
     @State private var productQuantity: Int = 1
     
-    let product: ProductType
+    internal let product: ProductType
     
     var body: some View {
         VStack(alignment: HorizontalAlignment.leading, spacing: 16) {
@@ -27,12 +27,14 @@ struct ProductDetailView: View {
                     .fontWeight(Font.Weight.bold)
                 
                 Text(product.description)
+                    .multilineTextAlignment(TextAlignment.leading)
                 
                 Text(product.formattedPrice)
                     .font(Font.title3)
                     .fontWeight(Font.Weight.bold)
             }
             .padding(Edge.Set.horizontal, 16)
+            .foregroundColor(Color.black)
             
         }
         
@@ -42,6 +44,7 @@ struct ProductDetailView: View {
             Text("Quantidade")
                 .font(Font.title3)
                 .fontWeight(Font.Weight.bold)
+                .foregroundColor(Color.black)
             
             HStack(spacing: 16) {
                 Button {
@@ -56,6 +59,7 @@ struct ProductDetailView: View {
                 Text("\(productQuantity)")
                     .font(Font.title)
                     .fontWeight(Font.Weight.bold)
+                    .foregroundColor(Color.black)
                 
                 Button {
                     productQuantity += 1
@@ -64,8 +68,6 @@ struct ProductDetailView: View {
                         .font(Font.title)
                         .fontWeight(Font.Weight.bold)
                 }
-                
-
             }
         }
         

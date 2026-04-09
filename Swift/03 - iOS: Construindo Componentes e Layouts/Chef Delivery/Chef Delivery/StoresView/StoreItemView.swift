@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StoreItemView: View {
-    let store: StoreType
+    internal let store: StoreType
     
     var body: some View {
         HStack {
