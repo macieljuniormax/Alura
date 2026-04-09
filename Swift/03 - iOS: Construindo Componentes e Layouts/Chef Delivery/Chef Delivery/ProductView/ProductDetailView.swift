@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @State private var productQuantity: Int = 1
+    
     internal let product: ProductType
     
     var body: some View {
@@ -15,7 +17,9 @@ struct ProductDetailView: View {
         
         Spacer()
         
-        ProductDetailQuantityView()
+        ProductDetailQuantityView(productQuantity: $productQuantity)
+        
+        Text("\(productQuantity)")
         
         Spacer()
         
