@@ -16,12 +16,14 @@ struct CategoryGridView: View {
     ]
     
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 8) {
+        LazyVGrid(columns: columns) {
             ForEach(categoriesMock) { category in
                 CategoryView(category: category)
                     .frame(maxWidth: CGFloat.infinity, alignment: Alignment.top)
             }
         }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 32)
     }
 }
 

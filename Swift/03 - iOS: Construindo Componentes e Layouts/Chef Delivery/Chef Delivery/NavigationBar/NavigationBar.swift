@@ -13,7 +13,7 @@ struct NavigationBar: View {
             Spacer()
             
             Button("R. Vergueiro, 3185") {}
-                .font(Font.title3)
+                .font(.subheadline)
                 .fontWeight(Font.Weight.semibold)
                 .foregroundColor(Color.black)
             
@@ -25,6 +25,7 @@ struct NavigationBar: View {
                     .foregroundColor(Color.red)
             }
         }
+        .padding(.horizontal, 16)
     }
 }
 

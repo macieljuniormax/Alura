@@ -14,18 +14,14 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 NavigationBar()
-                    .padding(Edge.Set.horizontal, 16)
                 
                 ScrollView(Axis.Set.vertical, showsIndicators: true) {
-                    VStack(spacing: 32) {
+                    VStack {
                         CategoryGridView()
-                            .padding(Edge.Set.horizontal, 16)
                         
                         CarouselTabView()
-                            .padding(Edge.Set.horizontal, 16)
                         
                         StoresContainerView()
-                            .padding(Edge.Set.horizontal, 16)
                     }
                 }
             }

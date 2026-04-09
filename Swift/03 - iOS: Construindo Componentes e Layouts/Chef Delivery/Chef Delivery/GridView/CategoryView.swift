@@ -11,24 +11,21 @@ struct CategoryView: View {
     let category: CategoryType
     
     var body: some View {
-        VStack (spacing: 5) {
+        VStack {
             ZStack {
-                RoundedRectangle(cornerRadius: 20, style:RoundedCornerStyle.continuous)
-                    .fill(Color.gray.opacity(0.3))
-                
                 Image(category.image)
                     .resizable()
                     .scaledToFit()
                     .padding(8)
             }
-            .frame(height: 80)
+            .frame(width: 80, height: 80)
+            .glassEffect(.regular.interactive(), in: .rect(cornerRadius: 20))
             
             
             Text(category.name)
                 .font(Font.system(size: 10))
                 .multilineTextAlignment(.center)
         }
-        .frame(maxWidth: CGFloat.infinity, alignment: Alignment.top)
     }
 }
 
