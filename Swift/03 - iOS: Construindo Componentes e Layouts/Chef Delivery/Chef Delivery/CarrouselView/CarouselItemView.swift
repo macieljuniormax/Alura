@@ -11,10 +11,24 @@ struct CarouselItemView: View {
     let banner: BannerType
     
     var body: some View {
-        Image(banner.image)
-            .resizable()
-            .scaledToFit()
-            .aspectRatio(contentMode: ContentMode.fill)
+        HStack {
+            Image(banner.image)
+                .resizable()
+                .scaledToFill()
+                .clipped()
+        }
+        .cornerRadius(20)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .strokeBorder(
+                    LinearGradient(
+                        colors: [.white.opacity(0.6), .white.opacity(0.1)],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ),
+                    lineWidth: 1.5
+                )
+        )
     }
 }
 
