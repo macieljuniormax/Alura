@@ -31,7 +31,10 @@ struct StoresContainerView: View {
                     Button {
                         ratingFilter = 0
                     } label: {
-                        Text("Limpar filtro")
+                        HStack {
+                            Text("Limpar filtro")
+                            Image(systemName: "trash")
+                        }
                     }
 
                     Section {
@@ -51,11 +54,13 @@ struct StoresContainerView: View {
                         Text("Filtrar")
                         Image(systemName: "line.3.horizontal.decrease.circle")
                     }
+                    .padding(16)
                     .font(Font.title3)
+                    .fontWeight(.semibold)
+                    .glassEffect(.regular.interactive(), in: .capsule)
                 }
-                .menuStyle(.button)
                 .foregroundColor(Color.black)
-    
+                .glassEffect(.clear)
 
             }
             
@@ -79,6 +84,7 @@ struct StoresContainerView: View {
             }
             .foregroundColor(Color.black)
         }
+        .padding(.horizontal, 16)
     }
 }
 
