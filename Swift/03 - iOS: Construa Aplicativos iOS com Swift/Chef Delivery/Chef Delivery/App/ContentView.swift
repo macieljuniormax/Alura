@@ -9,7 +9,10 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    // MARK: Atributtes
+    private var homeService = HomeService()
     
+    // MARK: View
     var body: some View {
         NavigationView {
             VStack {
@@ -26,7 +29,13 @@ struct ContentView: View {
                 }
             }
         }
+        .onAppear {
+            homeService.fetchData()
+        }
     }
+    
+    // MARK: Methods
+
 }
 
 #Preview {
