@@ -9,10 +9,12 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    // MARK: Atributtes
+    // MARK: - Atributtes
+    @State private var storesType: [StoreType] = []
+    
     private var homeService = HomeService()
     
-    // MARK: View
+    // MARK: - View
     var body: some View {
         NavigationView {
             VStack {
@@ -30,11 +32,26 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            homeService.fetchData()
+            Task {
+                await getStores()
+            }
         }
     }
     
-    // MARK: Methods
+    // MARK: - Methods
+    func getStores() async {
+        do {
+            let result = try await homeService.fetchData()
+            self.storesType = result
+        } catch RequestError.invalidUrl {
+            print("URL inválida")
+        } catch RequestError.errorRequest(let error) {
+            print("Erro na requisição: \(error)")
+        } catch {
+            print("Erro inesperado: \(error.localizedDescription)")
+        }
+        
+    }
 
 }
 

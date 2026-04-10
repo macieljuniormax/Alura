@@ -13,21 +13,15 @@ enum RequestError: Error {
 }
 
 struct HomeService {
-    func fetchData() async throws -> Result<[StoreType], RequestError> {
+    func fetchData() async throws -> [StoreType] {
         guard let url = URL(string: "https://private-f25198-macielcustodio.apiary-mock.com/home") else {
-            return .failure(.invalidUrl)
+            throw RequestError.invalidUrl
         }
         
         var request: URLRequest = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        do {
-            let (data, _) = try await URLSession.shared.data(for: request)
-            let storesObjetc = try JSONDecoder().decode([StoreType].self, from: data)
-            
-            return .success(storesObjetc)
-        } catch {
-            return .failure(.errorRequest(error: error.localizedDescription))
-        }
+        let (data, _) = try await URLSession.shared.data(for: request)
+        return try JSONDecoder().decode([StoreType].self, from: data)
     }
 }
