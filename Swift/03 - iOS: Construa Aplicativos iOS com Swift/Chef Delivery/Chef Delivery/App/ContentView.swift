@@ -31,10 +31,8 @@ struct ContentView: View {
                 }
             }
         }
-        .onAppear {
-            Task {
-                await getStores()
-            }
+        .task {
+            await getStores()
         }
     }
     
