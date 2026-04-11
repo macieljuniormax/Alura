@@ -10,23 +10,28 @@ import SwiftData
 
 struct ContentView: View {
     // MARK: - Atributtes
-    @State private var storesType: [StoreType] = []
+    @State private var stores: [StoreType] = []
+    @State private var isLoading: Bool = true
     
     private var homeService = HomeService()
     
     // MARK: - View
     var body: some View {
         NavigationView {
-            VStack {
-                NavigationBar()
-                
-                ScrollView(Axis.Set.vertical, showsIndicators: true) {
-                    VStack {
-                        CategoryGridView()
-                        
-                        CarouselTabView()
-                        
-                        StoresContainerView()
+            if isLoading {
+                ProgressView()
+            } else {
+                VStack {
+                    NavigationBar()
+                    
+                    ScrollView(Axis.Set.vertical, showsIndicators: true) {
+                        VStack {
+                            CategoryGridView()
+                            
+                            CarouselTabView()
+                            
+                            StoresContainerView(stores: stores)
+                        }
                     }
                 }
             }
@@ -40,7 +45,7 @@ struct ContentView: View {
     func getStores() async {
         do {
             let result = try await homeService.fetchData()
-            self.storesType = result
+            self.stores = result
         } catch RequestError.invalidUrl {
             print("URL inválida")
         } catch RequestError.errorRequest(let error) {
@@ -49,6 +54,7 @@ struct ContentView: View {
             print("Erro inesperado: \(error.localizedDescription)")
         }
         
+        self.isLoading = false
     }
 
 }

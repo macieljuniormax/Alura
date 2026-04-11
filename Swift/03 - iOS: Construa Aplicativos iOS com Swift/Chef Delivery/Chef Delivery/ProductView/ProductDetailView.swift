@@ -19,8 +19,6 @@ struct ProductDetailView: View {
         
         ProductDetailQuantityView(productQuantity: $productQuantity)
         
-        Text("\(productQuantity)")
-        
         Spacer()
         
         ProductDetailButtonView()
@@ -38,7 +36,7 @@ struct ProductDetailButtonView: View {
         } label: {
             HStack {
                 Image(systemName: "cart")
-                Text("Adicionar ao carrinho")
+                Text("Enviar Pedido")
             }
             .padding()
         }
