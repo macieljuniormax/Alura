@@ -11,6 +11,7 @@ struct ProductDetailView: View {
     @State private var productQuantity: Int = 1
     
     internal let product: ProductType
+    internal var homeService: HomeService = HomeService()
     
     var body: some View {
         ProductDetailHeaderView(product: product)
@@ -21,7 +22,25 @@ struct ProductDetailView: View {
         
         Spacer()
         
-        ProductDetailButtonView()
+        ProductDetailButtonView(onButtonPress: {
+            Task {
+                await confirmOrder()
+            }
+        })
+    }
+    
+    // MARK: - Methods
+    func confirmOrder() async {
+        do {
+            let result = try await homeService.confirmOrder(product: product)
+            print(result.message)
+        } catch RequestError.invalidUrl {
+            print("URL inválida")
+        } catch RequestError.errorRequest(let error) {
+            print("Erro na requisição: \(error)")
+        } catch {
+            print("Erro inesperado: \(error.localizedDescription)")
+        }
     }
 }
 
@@ -30,9 +49,13 @@ struct ProductDetailView: View {
 }
 
 struct ProductDetailButtonView: View {
+    // MARK: - Methods
+    internal let onButtonPress: () -> Void
+    
     var body: some View {
         Button {
-            print("O botão foi pressionado 🔘")
+            onButtonPress()
+                
         } label: {
             HStack {
                 Image(systemName: "cart")
