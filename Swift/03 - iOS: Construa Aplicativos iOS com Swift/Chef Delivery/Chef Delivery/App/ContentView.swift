@@ -37,7 +37,7 @@ struct ContentView: View {
             }
         }
         .task {
-            await getStores()
+            await getStoresWithAlamofire()
         }
     }
     
@@ -55,6 +55,19 @@ struct ContentView: View {
         }
         
         self.isLoading = false
+    }
+    
+    func getStoresWithAlamofire() async {
+        do {
+            let stores = try await homeService.fetchDataWithAlamofire()
+            self.stores = stores
+        } catch RequestError.invalidUrl {
+            print("URL inválida")
+        } catch RequestError.errorRequest(let error) {
+            print("Erro na requisição: \(error)")
+        } catch {
+            print("Erro inesperado: \(error.localizedDescription)")
+        }
     }
 }
 

@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Alamofire
+
 
 enum RequestError: Error {
     case invalidUrl
@@ -42,5 +44,13 @@ struct HomeService {
         let (data, _) = try await URLSession.shared.data(for: request)
         
         return try JSONDecoder().decode(OrderResponse.self, from: data)
+    }
+    
+    func fetchDataWithAlamofire() async throws -> [StoreType] {
+        let data = try await AF.request("https://private-f25198-macielcustodio.apiary-mock.com/home")
+            .serializingData()
+            .value
+        
+        return try JSONDecoder().decode([StoreType].self, from: data)
     }
 }
