@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var specialists: [Specialist] = []
+    
+    private let webService = WebService()
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -32,8 +36,26 @@ struct HomeView: View {
                 }
             }
             .padding(.horizontal)
+            .task {
+                await getSpecialists()
+            }
         }
         .padding(.top)
+    }
+    
+    // MARK: - Methods
+    func getSpecialists() async {
+        do {
+            let specialists = try await webService.getAllSpecialists()
+            self.specialists = specialists
+            print(specialists)
+        } catch URLError.Code.badURL {
+            print("URL Inválida")
+        } catch URLError.Code.badServerResponse {
+            print("Erro no servidor")
+        } catch {
+            print("Erro inesperado: \(error.localizedDescription)")
+        }
     }
 }
 
